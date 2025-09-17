@@ -2,10 +2,15 @@ body{
     padding: 0px;
     margin: 0px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+
     background-color:#69777a ;
     margin-top: 100px;
 }
+
+
 main{
     display: flex;
     flex-direction: column;
@@ -54,4 +59,31 @@ box-shadow: -4px -4px 9px 2px  rgb(90, 180, 80);
 }
 #equle{
     width: 145px !important;
+}
+@media(max-width:600px){
+    main{
+        width: 80%;
+        height: 500px;
+    }
+    #input input{
+        width: 80%;
+    }
+    #buttons{
+        margin-top: 20px;
+    }
+    #buttons button{
+        margin: 3px;
+        margin-bottom: 10px;
+        padding: 0px;
+        font-size: 15px;
+        font-weight: bold;
+        width: 55px;
+        height: 55px;
+
+
+    }
+    #equle{
+        width: 120px !important;
+    }
+
 }
