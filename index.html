@@ -1,49 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>calculator</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <main>
-        <section id="input">
-            <input type="number" >
-        </section>
-        <section id="buttons">
-            <div id="row-one">
-                <button>AC</button>
-            <button>DE</button>
-            <button>.</button>
-            <button>/</button>
-            
-            </div>
-            <div id="row-two">
-                <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>*</button>
-            </div>
-            <div id="row-three">
-                <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>-</button>
-            </div>
-            <div id="row-four">
-                <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>+</button>
-            </div>
-           <div id="row-five">
-             <button>00</button>
-            <button>0</button>
-            <button id="equle">=</button>
-           </div>
-        </section>
+      <section id="input">
+        <input id="result" type="text" disabled/>
+      </section>
+      <section id="buttons">
+        <div id="row-one">
+          <button onclick="AC()">AC</button>
+          <button onclick="DL()">DL</button>
+          <button onclick="addValue('.')">.</button>
+          <button onclick="addValue('/')">÷</button>
+        </div>
+        <div id="row-two">
+          <button onclick="addValue('7')">7</button>
+          <button onclick="addValue('8')">8</button>
+          <button onclick="addValue('9')">9</button>
+          <button onclick="addValue('*')">x</button>
+        </div>
+        <div id="row-three">
+          <button onclick="addValue('4')">4</button>
+          <button onclick="addValue('5')">5</button>
+          <button onclick="addValue('6')">6</button>
+          <button onclick="addValue('-')">-</button>
+        </div>
+        <div id="row-four">
+          <button onclick="addValue('1')">1</button>
+          <button onclick="addValue('2')">2</button>
+          <button onclick="addValue('3')">3</button>
+          <button onclick="addValue('+')">+</button>
+        </div>
+        <div id="row-five">
+          <button onclick="addValue('00')">00</button>
+          <button onclick="addValue('0')">0</button>
+          <button onclick="calculate('=')" id="equle">=</button>
+        </div>
+      </section>
     </main>
-   
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
