@@ -1,1 +1,2 @@
-full build calculator : calculator-8rg.pages.dev
+full build calculator : https://calculator-8rg.pages.dev
+
