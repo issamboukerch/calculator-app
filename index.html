@@ -22,16 +22,6 @@
             padding: 20px;
         }
 
-        .container {
-            display: flex;
-            gap: 20px;
-            max-width: 700px;
-            width: 100%;
-            justify-content: center;
-            align-items: flex-start;
-            flex-wrap: wrap;
-        }
-
         /* Calculator Card */
         main {
             background: rgba(255, 255, 255, 0.05);
@@ -122,142 +112,50 @@
         #equle:hover {
             background: linear-gradient(135deg, #64b5f6, #2196f3);
         }
-
-        /* History Panel */
-        .history-panel {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            padding: 20px;
-            width: 260px;
-            max-height: 420px;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .history-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 12px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            color: #b0bec5;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 8px;
-        }
-
-        .clear-history {
-            background: transparent;
-            border: none;
-            color: #ef5350;
-            font-size: 0.8rem;
-            cursor: pointer;
-            padding: 2px 6px;
-            border-radius: 4px;
-            height: auto;
-            box-shadow: none;
-        }
-        .clear-history:hover {
-            background: rgba(239, 83, 80, 0.1);
-            transform: none;
-        }
-
-        .history-list {
-            overflow-y: auto;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            flex-grow: 1;
-            padding-right: 4px;
-        }
-
-        .history-item {
-            background: rgba(0, 0, 0, 0.2);
-            padding: 8px 12px;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            color: #cfd8dc;
-            word-break: break-all;
-        }
-
-        .history-item span {
-            display: block;
-            font-size: 0.75rem;
-            color: #90a4ae;
-            text-align: right;
-            margin-top: 2px;
-        }
-
-        @media (max-width: 620px) {
-            .history-panel {
-                width: 320px;
-                max-height: 200px;
-            }
-        }
     </style>
 </head>
 <body>
-    
-    <div class="container">
-        <main>
-            <section id="input">
-                <input id="result" type="text" value="0" disabled />
-            </section>
-            <section id="buttons">
-                <div id="row-one">
-                    <button class="btn-action" onclick="AC()">AC</button>
-                    <button class="btn-action" onclick="DL()">DL</button>
-                    <button class="btn-op" onclick="addValue('%')">%</button>
-                    <button class="btn-op" onclick="addValue('/')">÷</button>
-                </div>
-                <div id="row-two">
-                    <button onclick="addValue('7')">7</button>
-                    <button onclick="addValue('8')">8</button>
-                    <button onclick="addValue('9')">9</button>
-                    <button class="btn-op" onclick="addValue('*')">×</button>
-                </div>
-                <div id="row-three">
-                    <button onclick="addValue('4')">4</button>
-                    <button onclick="addValue('5')">5</button>
-                    <button onclick="addValue('6')">6</button>
-                    <button class="btn-op" onclick="addValue('-')">-</button>
-                </div>
-                <div id="row-four">
-                    <button onclick="addValue('1')">1</button>
-                    <button onclick="addValue('2')">2</button>
-                    <button onclick="addValue('3')">3</button>
-                    <button class="btn-op" onclick="addValue('+')">+</button>
-                </div>
-                <div id="row-five">
-                    <button onclick="addValue('00')">00</button>
-                    <button onclick="addValue('0')">0</button>
-                    <button onclick="addValue('.')">.</button>
-                    <button onclick="calculate('=')" id="equle">=</button>
-                </div>
-            </section>
-        </main>
-
-        <!-- History Panel -->
-        <aside class="history-panel">
-            <div class="history-header">
-                <span>History</span>
-                <button class="clear-history" onclick="clearHistory()">Clear</button>
+    <main>
+        <section id="input">
+            <input id="result" type="text" value="0" disabled />
+        </section>
+        <section id="buttons">
+            <div id="row-one">
+                <button class="btn-action" onclick="AC()">AC</button>
+                <button class="btn-action" onclick="DL()">DL</button>
+                <button class="btn-op" onclick="addValue('%')">%</button>
+                <button class="btn-op" onclick="addValue('/')">÷</button>
             </div>
-            <div class="history-list" id="historyList">
-                <div class="history-item" style="text-align: center; color: #78909c;">No history yet</div>
+            <div id="row-two">
+                <button onclick="addValue('7')">7</button>
+                <button onclick="addValue('8')">8</button>
+                <button onclick="addValue('9')">9</button>
+                <button class="btn-op" onclick="addValue('*')">×</button>
             </div>
-        </aside>
-    </div>
+            <div id="row-three">
+                <button onclick="addValue('4')">4</button>
+                <button onclick="addValue('5')">5</button>
+                <button onclick="addValue('6')">6</button>
+                <button class="btn-op" onclick="addValue('-')">-</button>
+            </div>
+            <div id="row-four">
+                <button onclick="addValue('1')">1</button>
+                <button onclick="addValue('2')">2</button>
+                <button onclick="addValue('3')">3</button>
+                <button class="btn-op" onclick="addValue('+')">+</button>
+            </div>
+            <div id="row-five">
+                <button onclick="addValue('00')">00</button>
+                <button onclick="addValue('0')">0</button>
+                <button onclick="addValue('.')">.</button>
+                <button onclick="calculate('=')" id="equle">=</button>
+            </div>
+        </section>
+    </main>
 
     <script>
         const resultInput = document.getElementById('result');
-        const historyList = document.getElementById('historyList');
         let currentExpression = '0';
-        let history = [];
 
         function updateDisplay() {
             resultInput.value = currentExpression;
@@ -288,18 +186,12 @@
 
         function calculate() {
             try {
-                // Safely evaluate standard math expressions
                 let sanitizedExpression = currentExpression.replace(/×/g, '*').replace(/÷/g, '/');
                 let evalResult = eval(sanitizedExpression);
                 
-                // Format decimal results if needed
                 if (!Number.isInteger(evalResult)) {
                     evalResult = parseFloat(evalResult.toFixed(6));
                 }
-
-                const record = `${currentExpression} = ${evalResult}`;
-                history.unshift(record);
-                renderHistory();
 
                 currentExpression = evalResult.toString();
                 updateDisplay();
@@ -312,23 +204,7 @@
             }
         }
 
-        function renderHistory() {
-            if (history.length === 0) {
-                historyList.innerHTML = '<div class="history-item" style="text-align: center; color: #78909c;">No history yet</div>';
-                return;
-            }
-            historyList.innerHTML = history.map(item => {
-                const parts = item.split(' = ');
-                return `<div class="history-item">${parts[0]}<span>= ${parts[1]}</span></div>`;
-            }).join('');
-        }
-
-        function clearHistory() {
-            history = [];
-            renderHistory();
-        }
-
-        // Optional: Add physical keyboard responsiveness
+        // Physical keyboard responsiveness
         document.addEventListener('keydown', (e) => {
             if ((e.key >= '0' && e.key <= '9') || e.key === '.' || e.key === '+' || e.key === '-' || e.key === '*' || e.key === '/') {
                 addValue(e.key);
